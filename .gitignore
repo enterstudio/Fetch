@@ -1,0 +1,4 @@
+# Ignore Apache files (.htaccess, .htpasswd)
+
+.htaccess
+.htpasswd

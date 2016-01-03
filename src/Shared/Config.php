@@ -16,16 +16,18 @@ See http://materializecss.com/color.html for all available colours.
 
 // BASE CONFIGURATION
 
-$FETCH_BASE_URL = "http://localhost/fetch/src/"; // Set this to your base URL (without scheme)
+$FETCH_BASE_URL = "http://localhost/"; // Set this to your base URL (without scheme)
 
 
 // STYLING
 
-$FETCH_PRIMARY_COLOR = 'blue'; // The primary color of the site - coloured items will try and use this style
+$FETCH_PRIMARY_COLOR = 'indigo'; // The primary color of the site - coloured items will try and use this style
 
 
 // SQL CONFIGURATION
 
-$FETCH_SQL_USER = 'Fetch_SQL'; // Use this account to access SQL databases
-$FETCH_SQL_PASS = 'Fetch_SQL'; // Change this to the password for your SQL user
+$FETCH_SQL_SERVER = '127.0.0.1';
+$FETCH_SQL_PORT = 3306;
+$FETCH_SQL_USER = 'Fetch_SQL';
+$FETCH_SQL_PASS = 'Fetch_SQL'; // CHANGE THIS IN A PRODUCTION ENVIRONMENT! 
 $FETCH_SQL_DATABASE = 'Fetch'; // Request from this database

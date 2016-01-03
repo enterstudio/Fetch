@@ -1,8 +1,11 @@
 <?php
 	$FETCH_PAGE_TITLE = "Home"; // Store this as a variable so we can refer to it multiple times
+
+	require "Shared/Config.php";
+	require_once "Shared/Util/URLTransformation.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html ng-app="Fetch">
 	<head>
 		<title><?php echo $FETCH_PAGE_TITLE ?> | Fetch</title>
 		<?php require_once('Shared/Head.php'); ?>
@@ -10,8 +13,30 @@
 	<body>
 		<?php require_once('Shared/Nav.php'); ?>
 		<main class="container">
-			<h1>Welcome to Fetch!</h1>
-			<p class="flow-text">The Scratch-inspired sharing site</p>
+			<section class="row" id="welcome-message">
+				<div class="col s12">
+					<h1>Welcome to Fetch!</h1>
+					<p class="flow-text">The Scratch-inspired sharing site</p>
+				</div>
+			</section>
+			<section class="row">
+				<div class="col s12" id="latest-project-list" ng-controller="LatestProjects">
+					<h3>Latest Projects</h3>
+					<div class="row project-list">
+						<div class="col s6 m4 l3 project" ng-repeat="project in projects">
+							<div class="card">
+								<div class="card-image">
+									<img src="{{project.image}}">
+								</div>
+								<div class="card-content">
+									<span class="card-title truncate"><a href="<?= URL("Project")?>?id={{project.id}}">{{project.name}}</a></span>
+									<span class="by-line">By <a href="<?= URL("User")?>?id={{project.creator.id}}">{{project.creator.name}}</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<?php require_once('Shared/Footer.php'); ?>
 		<?php require_once('Shared/Scripts.php'); ?>

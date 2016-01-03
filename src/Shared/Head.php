@@ -11,4 +11,4 @@
 <!-- Mark us as mobile-supporting -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<link rel="stylesheet" href="<?= URL("Content/Site.css"); ?>"">
+<link rel="stylesheet" href="<?= URL("Content/Site.css"); ?>">
