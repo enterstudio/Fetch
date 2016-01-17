@@ -10,7 +10,6 @@ main {
 
 .project-list {
 	display: flex;
-	overflow-x: scroll;
 	overflow-y: hidden;
 }
 .project-list > .project {

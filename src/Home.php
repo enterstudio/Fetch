@@ -3,6 +3,7 @@
 
 	require "Shared/Config.php";
 	require_once "Shared/Util/URLTransformation.php";
+	require_once "Shared/Util/Render.php";
 ?>
 <!DOCTYPE html>
 <html ng-app="Fetch">
@@ -20,7 +21,7 @@
 				</div>
 			</section>
 			<section class="row">
-				<div class="col s12" id="latest-project-list" ng-controller="LatestProjects">
+				<div class="col s12 hide" id="latest-project-list" ng-controller="LatestProjects">
 					<h3>Latest Projects</h3>
 					<div class="row project-list">
 						<div class="col s6 m4 l3 project" ng-repeat="project in projects">
@@ -29,8 +30,8 @@
 									<img src="{{project.image}}">
 								</div>
 								<div class="card-content">
-									<span class="card-title truncate"><a href="<?= URL("Project")?>?id={{project.id}}">{{project.name}}</a></span>
-									<span class="by-line">By <a href="<?= URL("User")?>?id={{project.creator.id}}">{{project.creator.name}}</a></span>
+									<span class="card-title truncate"><a href="<?= URL("Project")?>?id={{project.id}}" ng-bind-template="{{project.name}}">Unknown Project</a></span>
+									<span class="by-line">By <a href="<?= URL("User")?>?id={{project.creator.id}}" ng-bind-template="{{project.creator.name}}">Unknown User</a></span>
 								</div>
 							</div>
 						</div>
@@ -40,5 +41,6 @@
 		</main>
 		<?php require_once('Shared/Footer.php'); ?>
 		<?php require_once('Shared/Scripts.php'); ?>
+		<?= render_file('Scripts/Home.js'); ?>
 	</body>
 </html>

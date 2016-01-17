@@ -16,7 +16,9 @@ See http://materializecss.com/color.html for all available colours.
 
 // BASE CONFIGURATION
 
-$FETCH_BASE_URL = "http://localhost/"; // Set this to your base URL (without scheme)
+$FETCH_BASE_URL = ""; // Set this to your base URL (after ip, without scheme)
+// Example:
+// $FETCH_BASE_URL = "Fetch/" // This would make absolute URL building output "http://<host>/Fetch/<Relative URL>"
 
 
 // STYLING

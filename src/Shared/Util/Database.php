@@ -1,8 +1,10 @@
 <?php
 
-$db_conn = NULL;
-$user_select = NULL;
+// Cache some important DB queries here
+$db_conn = NULL; // Database connection
+$user_select = NULL; // Querying for users by id
 
+// Opens a database connection
 function open_database_connection()
 {
 	global $db_conn;
@@ -17,6 +19,7 @@ function open_database_connection()
 	return $db_conn;
 }
 
+// Queries user information by ID
 function get_user($id)
 {
 	global $db_conn;

@@ -3,7 +3,7 @@
 # URL Transformation #
 Transforms a relative URL to an absolute URL
 
-## How we work ==
+## How we work ##
 1. First, We look at `$FETCH_BASE_URL` to determine what our absolute URI is
 2. Then, whenever we get passed a relative URL (one without a scheme), we transform it so it is absolute,
    relative to the value of `$FETCH_BASE_URL`.
