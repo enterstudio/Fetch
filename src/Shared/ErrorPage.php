@@ -88,6 +88,3 @@
 		<?php require_once(__DIR__ . "/Partials/Scripts.php"); ?>
 	</body>
 </html>
-<?php
-	return "Some stupid code to get PHP to work?";
-?>
