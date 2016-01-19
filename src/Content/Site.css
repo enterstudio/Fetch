@@ -8,6 +8,14 @@ main {
 	flex: 1 0 auto;
 }
 
+blockquote {
+	border-left-color: #9fa8da; /*indigo */
+}
+
+.small {
+	font-size: 50%;
+}
+
 .project-list {
 	display: flex;
 	overflow-y: hidden;

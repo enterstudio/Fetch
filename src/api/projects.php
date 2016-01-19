@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__ . '/../Shared/Config.php';
-require_once __DIR__ . '/../Shared/Util/Database.php';
+require_once(__DIR__ . "/../Shared/Config.php");
+require_once(__DIR__ . "/../Shared/Util/Database.php");
 
 $dbconn = open_database_connection();
 
@@ -29,4 +29,4 @@ if (isset($_GET['latest']))
 }
 
 
-echo('{}');
+echo('[]');

@@ -1,9 +1,9 @@
 <?php
-	require "Shared/Config.php";
-	require_once "Shared/Util/URLTransformation.php";
+	require_once(__DIR__ . "/../Config.php");
+	require_once(__DIR__ . "/../Util/URLTransformation.php");
 ?>
 
-<footer class="page-footer <?= $FETCH_PRIMARY_COLOR ?> lighten-2">
+<footer class="page-footer <?= FETCH_PRIMARY_COLOR ?> lighten-2">
 	<div class="container">
 		<div class="row">
 			<div class="col m4 s12">
@@ -18,14 +18,14 @@
 					It's easy to contribute to Fetch - just send a pull request! Any knowledge of PHP helps us expand and
 					become better!
 				</p>
-				<a href="https://github.com/DigiTechs/Fetch" alt="On GitHub" class="btn <?= $FETCH_PRIMARY_COLOR ?> darken-1">Find us on GitHub</a>
+				<a href="https://github.com/DigiTechs/Fetch" alt="On GitHub" class="btn <?= FETCH_PRIMARY_COLOR ?> darken-1">Find us on GitHub</a>
 			</div>
 			<div class="col m4 s12">
 				<h5 class="white-text">Talk to us</h5>
 				<p class="grey-text text-lighten-4">
 					We have a Gitter chatroom setup for you to talk to us. Drop by and suggest some features or two!
 				</p>
-				<a href="https://gitter.im/DigiTechs/Fetch" alt="On Gitter" class="btn <?= $FETCH_PRIMARY_COLOR ?> darken-1">Chat</a>
+				<a href="https://gitter.im/DigiTechs/Fetch" alt="On Gitter" class="btn <?= FETCH_PRIMARY_COLOR ?> darken-1">Chat</a>
 			</div>
 		</div>
 	</div>

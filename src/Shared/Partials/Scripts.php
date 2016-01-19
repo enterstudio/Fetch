@@ -1,6 +1,6 @@
 <?php
-	require "Shared/Config.php";
-	require_once "Shared/Util/URLTransformation.php";
+	require_once(__DIR__ . "/../Config.php");
+	require_once(__DIR__ . "/../Util/URLTransformation.php");
 ?>
 <!-- Scripts from Scripts.php -->
 

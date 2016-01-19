@@ -1,18 +1,18 @@
 <?php
 	$FETCH_PAGE_TITLE = "Home"; // Store this as a variable so we can refer to it multiple times
 
-	require "Shared/Config.php";
-	require_once "Shared/Util/URLTransformation.php";
-	require_once "Shared/Util/Render.php";
+	require_once(__DIR__ . "/Shared/Config.php");
+	require_once(__DIR__ . "/Shared/Util/URLTransformation.php");
+	require_once(__DIR__ . "/Shared/Util/Render.php");
 ?>
 <!DOCTYPE html>
 <html ng-app="Fetch">
 	<head>
 		<title><?php echo $FETCH_PAGE_TITLE ?> | Fetch</title>
-		<?php require_once('Shared/Head.php'); ?>
+		<?php require_once(__DIR__ . "/Shared/Partials/Head.php"); ?>
 	</head>
 	<body>
-		<?php require_once('Shared/Nav.php'); ?>
+		<?php require_once(__DIR__ . "/Shared/Partials/Nav.php"); ?>
 		<main class="container">
 			<section class="row" id="welcome-message">
 				<div class="col s12">
@@ -39,8 +39,8 @@
 				</div>
 			</section>
 		</main>
-		<?php require_once('Shared/Footer.php'); ?>
-		<?php require_once('Shared/Scripts.php'); ?>
+		<?php require_once(__DIR__ . "/Shared/Partials/Footer.php"); ?>
+		<?php require_once(__DIR__ . "/Shared/Partials/Scripts.php"); ?>
 		<?= render_file('Scripts/Home.js'); ?>
 	</body>
 </html>
