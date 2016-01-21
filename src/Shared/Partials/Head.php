@@ -1,6 +1,6 @@
 <?php
-	require_once(__DIR__ . "/../Config.php");
-	require_once(__DIR__ . "/../Util/URLTransformation.php");
+	require_once(__DIR__ . '/../Config.php');
+	require_once(__DIR__ . '/../Util/URLTransformation.php');
 ?>
 <!-- HTML head from Head.php -->
 
@@ -11,4 +11,4 @@
 <!-- Mark us as mobile-supporting -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<link href="<?= URL("Content/Site.css"); ?>" rel="stylesheet">
+<link href="<?= URL('Content/Site.css'); ?>" rel="stylesheet">

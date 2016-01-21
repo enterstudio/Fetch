@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . "/../Config.php");
+require_once(__DIR__ . '/../Config.php');
 
 // Cache some important DB queries here
 $db_conn = NULL; // Database connection

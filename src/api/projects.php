@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__ . "/../Shared/Config.php");
-require_once(__DIR__ . "/../Shared/Util/Database.php");
+require_once(__DIR__ . '/../Shared/Config.php');
+require_once(__DIR__ . '/../Shared/Util/Database.php');
 
 $dbconn = open_database_connection();
 
@@ -12,15 +12,15 @@ if (isset($_GET['latest']))
 	$output = array();
 	foreach ($data as $row)
 	{
-		$creatorId = $row["CreatorId"];
+		$creatorId = $row['CreatorId'];
 		$creatorInfo = get_user($creatorId);
 		array_push($output, array(
-			"id" => $row["ProjectId"],
-			"name" => $row["ProjectName"],
-			"image" => "", // TODO: generate image
-			"creator" => array(
-				"id" => $creatorId,
-				"name" => $creatorInfo["Username"]
+			'id' => $row['ProjectId'],
+			'name' => $row['ProjectName'],
+			'image'=> '', // TODO: generate image
+			'creator' => array(
+				'id' => $creatorId,
+				'name' => $creatorInfo['Username']
 			)
 		));
 	}

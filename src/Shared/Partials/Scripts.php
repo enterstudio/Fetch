@@ -1,6 +1,6 @@
 <?php
-	require_once(__DIR__ . "/../Config.php");
-	require_once(__DIR__ . "/../Util/URLTransformation.php");
+	require_once(__DIR__ . '/../Config.php');
+	require_once(__DIR__ . '/../Util/URLTransformation.php');
 ?>
 <!-- Scripts from Scripts.php -->
 
@@ -9,4 +9,4 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <!-- Site base JS -->
-<script type="text/javascript" src="<?= URL("Scripts/Site.js"); ?>"></script>
+<script type="text/javascript" src="<?= URL('Scripts/Site.js'); ?>"></script>

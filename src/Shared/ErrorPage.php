@@ -1,17 +1,17 @@
 <?php
-	require_once(__DIR__ . "/Config.php");
-	require_once(__DIR__ . "/Util/URLTransformation.php");
-	require_once(__DIR__ . "/Util/Render.php");
-	require_once(__DIR__ . "/Util/Exceptions.php");
+	require_once(__DIR__ . '/Config.php');
+	require_once(__DIR__ . '/Util/URLTransformation.php');
+	require_once(__DIR__ . '/Util/Render.php');
+	require_once(__DIR__ . '/Util/Exceptions.php');
 ?>
 <!DOCTYPE html>
 <html ng-app="Fetch">
 	<head>
 		<title><?php echo $FETCH_PAGE_TITLE ?> | Fetch</title>
-		<?php require_once(__DIR__ . "/Partials/Head.php"); ?>
+		<?php require_once(__DIR__ . '/Partials/Head.php'); ?>
 	</head>
 	<body>
-		<?php require_once(__DIR__ . "/Partials/Nav.php"); ?>
+		<?php require_once(__DIR__ . '/Partials/Nav.php'); ?>
 		<main class="container">
 			<section class="row">
 				<div class="col s12">
@@ -71,8 +71,8 @@
 								<td><?= php_uname('m') ?></td>
 							</tr>
 							<tr>
-								<td>Fetch exception handling</td>
-								<td><?= FETCH_EXCEPTION_HANDLING ? "Enabled" : "Disabled" ?></td>
+								<td>HTTP Server</td>
+								<td><?= defined($_SERVER['SERVER_SIGNATURE']) ? $_SERVER['SERVER_SIGNATURE'] : 'Unknown' ?></td>
 							</tr>
 							<tr>
 								<td>Fetch base URL</td>
@@ -82,9 +82,10 @@
 					</table>
 				</div>
 			</section>
+			<?php } else {?>
 			<?php } ?>
 		</main>
-		<?php require_once(__DIR__ . "/Partials/Footer.php"); ?>
-		<?php require_once(__DIR__ . "/Partials/Scripts.php"); ?>
+		<?php require_once(__DIR__ . '/Partials/Footer.php'); ?>
+		<?php require_once(__DIR__ . '/Partials/Scripts.php'); ?>
 	</body>
 </html>

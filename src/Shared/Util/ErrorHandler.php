@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . "/../Config.php");
-require_once(__DIR__ . "/Exceptions.php");
-require_once(__DIR__ . "/HttpErrorCodes.php");
+require_once(__DIR__ . '/../Config.php');
+require_once(__DIR__ . '/Exceptions.php');
+require_once(__DIR__ . '/HttpErrorCodes.php');
 
 ob_start(); // Start output buffering so that if we need to we can send another page entirely
 
@@ -38,11 +38,11 @@ function ExceptionHandler(Exception $e)
 
 		http_response_code($code);
 
-		$already_included = require_once(__DIR__ . "/../ErrorPage.php");
+		$already_included = require_once(__DIR__ . '/../ErrorPage.php');
 
 		if ($already_included === true)
 		{
-			die("<!DOCTYPE html><html><head><title>Fatal Error | Fetch</title></head><body><h1>A fatal error has occured</h1><p>We're sorry. Try going to a different page.</p></body></html>");
+			die('<!DOCTYPE html><html><head><title>Fatal Error | Fetch</title></head><body><h1>A fatal error has occured</h1><p>We\'re sorry. Try going to a different page.</p></body></html>');
 		}
 	}
 	else
@@ -56,11 +56,11 @@ function ExceptionHandler(Exception $e)
 		$FETCH_ERROR_EXCEPTION = $e;
 		$FETCH_ERROR_CODE = $code;
 
-		require_once(__DIR__ . "/../ErrorPage.php");
+		require_once(__DIR__ . '/../ErrorPage.php');
 
 		if ($already_included === true)
 		{
-			die("<!DOCTYPE html><html><head><title>Fatal Error | Fetch</title></head><body><h1>A fatal error has occured</h1><p>We're sorry. Try going to a different page.</p></body></html>");
+			die('<!DOCTYPE html><html><head><title>Fatal Error | Fetch</title></head><body><h1>A fatal error has occured</h1><p>We\'re sorry. Try going to a different page.</p></body></html>');
 		}
 	}
 
@@ -72,18 +72,18 @@ function ExceptionHandler(Exception $e)
 function FatalCheck()
 {
 	$error = error_get_last();
-	if ($error["type"] == E_ERROR)
+	if ($error['type'] == E_ERROR)
 	{
-		ErrorHandler($error["type"], $error["message"], $error["file"], $error["line"]);
+		ErrorHandler($error['type'], $error['message'], $error['file'], $error['line']);
 	}
 }
 
 
 // Register error handlers
 
-register_shutdown_function( "FatalCheck" );
-set_error_handler( "ErrorHandler" );
-set_exception_handler( "ExceptionHandler" );
+register_shutdown_function( 'FatalCheck' );
+set_error_handler( 'ErrorHandler' );
+set_exception_handler( 'ExceptionHandler' );
 
-ini_set( "display_errors", "off" ); // Don't display errors to the user
+ini_set( 'display_errors', 'off' ); // Don't display errors to the user
 error_reporting( E_ALL ); // Catch all errors

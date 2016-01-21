@@ -11,11 +11,11 @@ if (function_exists('mime_content_type'))
 		$content_type = mime_content_type($file_location);
 
 		// Support badly-configured systems
-		if ($content_type === "application/javascript" || $content_type === "text/javascript")
+		if ($content_type === 'application/javascript' || $content_type === 'text/javascript')
 		{
 			return "<script type=\"text/javascript\" src=\"$file_location\"></script>";
 		}
-		elseif ($content_type === "text/css")
+		elseif ($content_type === 'text/css')
 		{
 			return "<link href=\"$file_location\" rel=\"stylesheet\">";
 		}
@@ -33,11 +33,11 @@ else
 		$path_parts = pathinfo($file_location);
 		$extension = isset($path_parts['extension']) ? $path_parts['extension'] : '';
 
-		if ($extension === "js")
+		if ($extension === 'js')
 		{
 			return "<script type=\"text/javascript\" src=\"$file_location\"></script>";
 		}
-		elseif ($extension === "css")
+		elseif ($extension === 'css')
 		{
 			return "<link href=\"$file_location\" rel=\"stylesheet\">";
 		}
