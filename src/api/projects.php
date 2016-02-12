@@ -17,7 +17,8 @@ if (isset($_GET['latest']))
 		array_push($output, array(
 			'id' => $row['ProjectId'],
 			'name' => $row['ProjectName'],
-			'image'=> '', // TODO: generate image
+			// TODO: generate image
+			'image'=> 'http://lorempixel.com/400/200/cats', // this site is like the best
 			'creator' => array(
 				'id' => $creatorId,
 				'name' => $creatorInfo['Username']

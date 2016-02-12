@@ -33,5 +33,9 @@ function URL($url)
 		throw new DomainException('The passed URL is badly formed.');
 	}
 
+	if (isset($_GET["noscript"])) { // Override if we're running in noscript mode (TODO: move this elsewhere)
+		$parsed_base["query"] = "noscript=1";
+	}
+
 	return http_build_url($parsed_base, $parsed_url);
 }

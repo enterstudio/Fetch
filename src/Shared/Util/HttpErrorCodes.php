@@ -10,6 +10,6 @@ $FETCH_HTTP_ERROR_CODES = array(
 // Dictionary of user-friendly error messages
 $FETCH_HTTP_ERROR_DESCRIPTIONS = array(
 	404 => 'The page you were looking for could not be found. Sorry!',
-	418 => 'I can\'t brew coffee! I\'m a teapot!',
+	418 => 'The resulting page may be short and stout.',
 	500 => 'An unknown internal error occured. Sorry!'
 );

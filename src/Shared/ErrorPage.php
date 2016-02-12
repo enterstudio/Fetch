@@ -3,6 +3,8 @@
 	require_once(__DIR__ . '/Util/URLTransformation.php');
 	require_once(__DIR__ . '/Util/Render.php');
 	require_once(__DIR__ . '/Util/Exceptions.php');
+
+	$FETCH_SHORT_TITLE = "Error";
 ?>
 <!DOCTYPE html>
 <html ng-app="Fetch">
@@ -11,7 +13,10 @@
 		<?php require_once(__DIR__ . '/Partials/Head.php'); ?>
 	</head>
 	<body>
-		<?php require_once(__DIR__ . '/Partials/Nav.php'); ?>
+		<?php require_once(__DIR__ . '/Shared/Partials/Noscript.php'); ?>
+		<header>
+			<?php require_once(__DIR__ . '/Shared/Partials/Nav.php'); ?>
+		</header>
 		<main class="container">
 			<section class="row">
 				<div class="col s12">

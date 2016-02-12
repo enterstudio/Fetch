@@ -3,18 +3,28 @@
 	require_once(__DIR__ . '/../Util/URLTransformation.php');
 ?>
 <!-- Navbar from Nav.php -->
-<nav class="<?= FETCH_PRIMARY_COLOR ?> lighten-2">
-	<div class="nav-wrapper container">
-		<a href="<?= URL('Home') ?>" class="brand-logo left">Fetch</a>
-		<ul id="nav-mobile" class="right hide-on-large-only">
-			<li><a href="<?= URL('Mods') ?>" alt="Mods" class="tooltipped" data-position="bottom" data-delay="500" data-tooltip="Mods"><i class="material-icons">extension</i></a></li>
-			<li><a href="<?= URL('Projects') ?>" alt="Projects" class="tooltipped" data-position="bottom" data-delay="500" data-tooltip="Projects"><i class="material-icons">code</i></a></li>
-			<li><a href="<?= URL('Login') ?>" alt="Login" class="tooltipped" data-position="bottom" data-delay="500" data-tooltip="Login"><i class="material-icons">account_circle</i></a></li>
-		</ul>
-		<ul id="nav-desktop" class="right hide-on-med-and-down">
-			<li><a href="<?= URL('Mods') ?>" alt="Mods">Mods</a></li>
-			<li><a href="<?= URL('Projects') ?>" alt="Projects">Projects</a></li>
-			<li><a href="<?= URL('Login') ?>" alt="Login">Login</a></li>
-		</ul>
+<nav class="<?= FETCH_PRIMARY_COLOR ?> lighten-2 top-nav">
+	<ul class="side-nav fixed" id="side-nav">
+		<li class="logo">
+			<a class="brand-logo" href="<?= URL('Home') ?>">
+				Fetch
+			</a>
+		</li>
+		<li><a href="<?= URL('Mods') ?>" alt="Mods">Mods</a></li>
+		<li><a href="<?= URL('Projects') ?>" alt="Projects">Projects</a></li>
+		<li><a href="<?= URL('Login') ?>" alt="Login">Login</a></li>
+	</ul>
+
+	<div class="nav-wrapper">
+		<div class="container">
+			<a href="#" data-activates="side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+			<a class="page-title"><?= isset($FETCH_SHORT_TITLE) ? $FETCH_SHORT_TITLE : $FETCH_PAGE_TITLE ?></a>
+			<form class="search right">
+				<div class="input-field">
+					<input id="search" type="search" required>
+					<label for="search"><i class="material-icons">search</i></label>
+				</div>
+			</form>
+		</div>
 	</div>
 </nav>

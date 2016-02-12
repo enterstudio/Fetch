@@ -12,21 +12,15 @@
 		<?php require_once(__DIR__ . '/Shared/Partials/Head.php'); ?>
 	</head>
 	<body>
-		<?php require_once(__DIR__ . '/Shared/Partials/Nav.php'); ?>
-		<div class="nav-extend <?= $FETCH_PRIMARY_COLOR ?> lighten-2">
-			<div class="container">
-				<div class="row">
-					<div class="col s11 offset-s1">
-						<h1 class="white-text">Login</h1>
-					</div>
-				</div>
-			</div>
-		</div>
+		<?php require_once(__DIR__ . '/Shared/Partials/Noscript.php'); ?>
+		<header>
+			<?php require_once(__DIR__ . '/Shared/Partials/Nav.php'); ?>
+		</header>
 		<main class="container">
 			<section class="row">
 				<form class="col s12">
 					<div class="row">
-						<div class="input-field col s6">
+						<div class="input-field col s12 m6">
 							<i class="material-icons prefix">account_circle</i>
 							<input type="text" class="validate" name="username">
 							<label for="username">Username</label>

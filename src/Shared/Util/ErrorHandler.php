@@ -42,6 +42,8 @@ function ExceptionHandler(Exception $e)
 
 		if ($already_included === true)
 		{
+			error_log($FETCH_ERROR_EXCEPTION);
+
 			die('<!DOCTYPE html><html><head><title>Fatal Error | Fetch</title></head><body><h1>A fatal error has occured</h1><p>We\'re sorry. Try going to a different page.</p></body></html>');
 		}
 	}
@@ -56,15 +58,15 @@ function ExceptionHandler(Exception $e)
 		$FETCH_ERROR_EXCEPTION = $e;
 		$FETCH_ERROR_CODE = $code;
 
-		require_once(__DIR__ . '/../ErrorPage.php');
+		$already_included = require_once(__DIR__ . '/../ErrorPage.php');
 
 		if ($already_included === true)
 		{
+			error_log($FETCH_ERROR_EXCEPTION);
+
 			die('<!DOCTYPE html><html><head><title>Fatal Error | Fetch</title></head><body><h1>A fatal error has occured</h1><p>We\'re sorry. Try going to a different page.</p></body></html>');
 		}
 	}
-
-	exit();
 }
 
 
