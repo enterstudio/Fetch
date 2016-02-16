@@ -13,10 +13,17 @@ main {
 }
 
 blockquote {
-	border-left-color: #9fa8da; /*indigo */
+	border-left-color: #9fa8da;
 }
 .small {
 	font-size: 50%;
+}
+
+.scrim.light {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.18) 30%, rgba(0, 0, 0, 0));
+}
+.scrim.dark {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.18) 30%, rgba(0, 0, 0, 0));
 }
 
 nav .side-nav.fixed .logo {
@@ -28,6 +35,33 @@ nav .side-nav.fixed .logo .brand-logo {
 	background: none;
 	font-size: 2.1rem;
 }
+nav .side-nav.fixed .current-user {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.18) 30%, rgba(0, 0, 0, 0)), url(https://www.ricoh.com/r_dc/caplio/r7/img/sample_04.jpg) no-repeat center center;
+	background-size: cover;
+	padding: 0px;
+	line-height: 44px;
+	margin-bottom: 15px;
+	padding: 15px 0px 0px 15px;
+}
+	.current-user a {
+		line-height: 44px;
+		height: auto;
+		padding: 0px !important;
+		color: #fff !important;
+		text-shadow: 1px 1px 1px #444;
+	}
+	.current-user a:hover {
+		background: none;
+	}
+	.current-user .row {
+		margin: 0;
+	}
+	.current-user .role {
+		color: #fff;
+		margin-top: -16px;
+		font-size: 13px;
+		text-shadow: 1px 1px 1px #444;
+	}
 
 nav .page-title {
 	position: absolute;
@@ -37,11 +71,9 @@ nav .page-title {
 	padding: 0;
 	white-space: nowrap;
 }
-
 nav .search {
 	width: 45%
 }
-
 nav .search .input-field input[type=search] {
 	position: absolute;
 	height: 56px;

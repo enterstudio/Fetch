@@ -13,10 +13,10 @@
 		<?php require_once(__DIR__ . '/Partials/Head.php'); ?>
 	</head>
 	<body>
-		<?php require_once(__DIR__ . '/Shared/Partials/Noscript.php'); ?>
+		<?php require_once(__DIR__ . '/Partials/Noscript.php'); ?>
 		<header>
-			<?php require_once(__DIR__ . '/Shared/Partials/Nav.php'); ?>
-		</header>
+			<?php require_once(__DIR__ . '/Partials/Nav.php'); ?>
+		</header>1
 		<main class="container">
 			<section class="row">
 				<div class="col s12">

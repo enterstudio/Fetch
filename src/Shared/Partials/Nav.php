@@ -10,6 +10,17 @@
 				Fetch
 			</a>
 		</li>
+		<li class="current-user">
+			<div class="row">
+				<div class="col s4">
+					<img src="http://lorempixel.com/400/400/cats" class="circle responsive-img">
+				</div>
+				<div class="col s8">
+					<a href="#">John Doe</a>
+					<p class="role">User</p>
+				</div>
+			</div>
+		</li>
 		<li><a href="<?= URL('Mods') ?>" alt="Mods">Mods</a></li>
 		<li><a href="<?= URL('Projects') ?>" alt="Projects">Projects</a></li>
 		<li><a href="<?= URL('Login') ?>" alt="Login">Login</a></li>
