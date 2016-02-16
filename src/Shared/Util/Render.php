@@ -2,7 +2,9 @@
 
 // Renders content such as JavaScript and CSS files
 
-if (function_exists('mime_content_type'))
+// HACK: Gwiddle does not detect content types correctly. TODO: bring this up with them?
+
+/*if (function_exists('mime_content_type'))
 {
 	// We support mime_content_type() - use this because it's better
 
@@ -26,7 +28,7 @@ if (function_exists('mime_content_type'))
 	}
 }
 else
-{
+{*/
 	// We do not support mime_content_type() - use pathinfo() for matching file extension
 	function render_file($file_location)
 	{
@@ -46,4 +48,4 @@ else
 			trigger_error("Unknown file extension '$extension' when trying to render '$file_location'");
 		}
 	}
-}
+//}
