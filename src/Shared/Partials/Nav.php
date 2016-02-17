@@ -1,6 +1,9 @@
 <?php
 	require_once(__DIR__ . '/../Config.php');
 	require_once(__DIR__ . '/../Util/URLTransformation.php');
+	require_once(__DIR__ . '/../Util/Database.php');
+
+	session_start();
 ?>
 <!-- Navbar from Nav.php -->
 <nav class="<?= FETCH_PRIMARY_COLOR ?> lighten-2 top-nav">
@@ -10,17 +13,19 @@
 				Fetch
 			</a>
 		</li>
+		<?php if (isset($_SESSION['UserId'])) { ?>
 		<li class="current-user">
 			<div class="row">
 				<div class="col s4">
 					<img src="http://lorempixel.com/400/400/cats" class="circle responsive-img">
 				</div>
 				<div class="col s8">
-					<a href="#">John Doe</a>
+					<a href="#"><?= get_user($_SESSION["UserId"])["Username"] ?></a>
 					<p class="role">User</p>
 				</div>
 			</div>
 		</li>
+		<?php } ?>
 		<li><a href="<?= URL('Mods') ?>" alt="Mods">Mods</a></li>
 		<li><a href="<?= URL('Projects') ?>" alt="Projects">Projects</a></li>
 		<li><a href="<?= URL('Login') ?>" alt="Login">Login</a></li>

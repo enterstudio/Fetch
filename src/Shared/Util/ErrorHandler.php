@@ -58,6 +58,8 @@ function ExceptionHandler(Exception $e)
 		$FETCH_ERROR_EXCEPTION = $e;
 		$FETCH_ERROR_CODE = $code;
 
+		http_response_code($code);
+
 		$already_included = require_once(__DIR__ . '/../ErrorPage.php');
 
 		if ($already_included === true)
@@ -67,6 +69,8 @@ function ExceptionHandler(Exception $e)
 			die('<!DOCTYPE html><html><head><title>Fatal Error | Fetch</title></head><body><h1>A fatal error has occured</h1><p>We\'re sorry. Try going to a different page.</p></body></html>');
 		}
 	}
+
+	exit();
 }
 
 

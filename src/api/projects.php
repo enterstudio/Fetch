@@ -1,5 +1,6 @@
 <?php
 
+
 require_once(__DIR__ . '/../Shared/Config.php');
 require_once(__DIR__ . '/../Shared/Util/Database.php');
 
@@ -7,6 +8,7 @@ $dbconn = open_database_connection();
 
 if (isset($_GET['latest']))
 {
+	// TODO: cache this (Memcached?)
 	$data = $dbconn->query('SELECT `ProjectId`,`ProjectName`,`CreatorId` FROM `projects` DESCENDING LIMIT 6');
 
 	$output = array();
@@ -26,6 +28,7 @@ if (isset($_GET['latest']))
 		));
 	}
 
+	header('Content-type: text/plain');
 	die(json_encode($output));
 }
 

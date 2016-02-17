@@ -45,6 +45,11 @@ $FETCH_SQL_PASS = 'Fetch_SQL'; // CHANGE THIS IN A PRODUCTION ENVIRONMENT!
 $FETCH_SQL_DATABASE = 'Fetch'; // Request from this database
 
 
+// SECURITY
+
+$FETCH_PASSWORD_HASHING = PASSWORD_DEFAULT; // What mechanism do we use to hash?
+$FETCH_PASSWORD_COST = 10; // "Cost" of hashing. 10 is a good baseline - consider increasing it if your hardware supports it.
+
 // EXTRAS
 
 // Ensure that exception debugging is turned off for non-localhost requests
@@ -57,11 +62,8 @@ define('FETCH_BASE_URL', $FETCH_BASE_URL);
 define('FETCH_EXCEPTION_HANDLING', $FETCH_EXCEPTION_HANDLING);
 define('FETCH_EXCEPTION_DEBUG', $FETCH_EXCEPTION_DEBUG);
 define('FETCH_PRIMARY_COLOR', $FETCH_PRIMARY_COLOR);
-define('FETCH_SQL_SERVER', $FETCH_SQL_SERVER);
-define('FETCH_SQL_PORT', $FETCH_SQL_PORT);
-define('FETCH_SQL_USER', $FETCH_SQL_USER);
-define('FETCH_SQL_PASS', $FETCH_SQL_PASS);
-define('FETCH_SQL_DATABASE', $FETCH_SQL_DATABASE);
+define('FETCH_PASSWORD_HASHING', $FETCH_PASSWORD_HASHING);
+define('FETCH_PASSWORD_COST', $FETCH_PASSWORD_COST);
 
 if ($FETCH_EXCEPTION_HANDLING) // No need to do anything here; change $FETCH_EXCEPTION_HANDLING
 {

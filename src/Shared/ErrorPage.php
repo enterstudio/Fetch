@@ -16,7 +16,7 @@
 		<?php require_once(__DIR__ . '/Partials/Noscript.php'); ?>
 		<header>
 			<?php require_once(__DIR__ . '/Partials/Nav.php'); ?>
-		</header>1
+		</header>
 		<main class="container">
 			<section class="row">
 				<div class="col s12">
@@ -31,7 +31,7 @@
 					require_once(__DIR__ . "/Partials/Errors/{$FETCH_ERROR_CODE}.php");
 				} else { ?>
 					<p class="flow-text">
-						Unfortuantely, there is no additional information for the error you are experiencing.<br/>
+						Unfortuantely, there is no additional information for the error you are experiencing.
 						All we have is this flimsy little HTTP error code: <?= $FETCH_ERROR_CODE ?>
 					</p>
 				<?php } ?>

@@ -25,6 +25,11 @@
 							<input type="text" class="validate" name="username">
 							<label for="username">Username</label>
 						</div>
+						<div class="input-field col s12 m6">
+							<i class="material-icons prefix">account_circle</i>
+							<input type="text" class="validate" name="username">
+							<label for="username">Username</label>
+						</div>
 					</div>
 				</form>
 			</section>
