@@ -20,7 +20,7 @@
 					<img src="http://lorempixel.com/400/400/cats" class="circle responsive-img">
 				</div>
 				<div class="col s8">
-					<a href="#"><?= get_user($_SESSION["UserId"])["Username"] ?></a>
+					<a href="#"><?= htmlentities(get_user($_SESSION["UserId"])["Username"]) ?></a>
 					<p class="role">User</p>
 				</div>
 			</div>
