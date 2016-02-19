@@ -13,7 +13,7 @@ main {
 }
 
 blockquote {
-	border-left-color: #9fa8da;
+	border-left-color: #7986cb;
 }
 .small {
 	font-size: 50%;
@@ -119,26 +119,20 @@ nav .search .input-field input[type=search]:valid+label i {
 }
 
 .input-field input[type=text]:focus + label {
-	color: #9fa8da;
+	color: #7986cb;
 }
 .input-field input[type=text]:focus {
-	border-bottom: 1px solid #9fa8da;
-	box-shadow: 0 1px 0 0 #9fa8da;
+	border-bottom: 1px solid #7986cb;
+	box-shadow: 0 1px 0 0 #7986cb;
 }
 .input-field input[type=password]:focus + label {
-	color: #9fa8da;
+	color: #7986cb;
 }
 .input-field input[type=password]:focus {
-	border-bottom: 1px solid #9fa8da;
-	box-shadow: 0 1px 0 0 #9fa8da;
+	border-bottom: 1px solid #7986cb;
+	box-shadow: 0 1px 0 0 #7986cb;
 }
-.input-field input[type=search]:focus + label {
-	color: #9fa8da;
-}
-.input-field input[type=search]:focus {
-	border-bottom: 1px solid #9fa8da;
-	box-shadow: 0 1px 0 0 #9fa8da;
-}
+
 .input-field .prefix.active {
-	color: #9fa8da;
+	color: #7986cb;
 }

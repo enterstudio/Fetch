@@ -23,7 +23,7 @@
 			<div class="col m4 s12">
 				<h5 class="white-text">Talk to us</h5>
 				<p class="grey-text text-lighten-4">
-					We have a Gitter chatroom setup for you to talk to us. Drop by and suggest some features or two.
+					We have a Gitter chatroom setup for you to talk to us. Drop by and suggest a feature or two.
 				</p>
 				<a href="https://gitter.im/DigiTechs/Fetch" target="_blank" alt="On Gitter" class="waves-effect waves-light btn <?= FETCH_PRIMARY_COLOR ?> darken-1">Chat</a>
 			</div>
